@@ -1,2 +1,3 @@
-# portfolio-template
-A template for COMP123 students to maintain their in-class activities and other potential public work.
+# COMP123 Portfolio, Fall 2025
+
+This repo is the portfolio for COMP123 Core Concepts in Computer Science taken at Macaleser in Fall 2025.
