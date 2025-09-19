@@ -1,9 +1,18 @@
 import turtle
 import math
 
+def drawFiveCircles(turt,r,x,y):
+    turt.up()
+    turt.goto(x, y)
+    turt.down()
+    for i in range(5):
+        turt.begin_fill()
+        turt.circle(r)
+        turt.end_fill()
+        turt.left(72)
+
 win = turtle.Screen()
 win.bgcolor("light sky blue")
-
 sepalTurtle = turtle.Turtle()
 sepalTurtle.speed(0)
 sepalTurtle.color("dark green", "spring green")
@@ -13,6 +22,17 @@ petalTurtle = turtle.Turtle()
 petalTurtle.speed(0)
 petalTurtle.color('dark red', 'light coral')
 petalTurtle.hideturtle()
+drawFiveCircles(sepalTurtle, 50, 0, 0)
+drawFiveCircles(petalTurtle, 25, 0, 0)
+drawFiveCircles(sepalTurtle, 50, 0, 220)
+drawFiveCircles(petalTurtle, 25, 0, 220)
+drawFiveCircles(sepalTurtle, 50, 0, -220)
+drawFiveCircles(petalTurtle, 25, 0, -220)
+drawFiveCircles(sepalTurtle, 50, -220, 0)
+drawFiveCircles(petalTurtle, 25, -220, 0)
+drawFiveCircles(sepalTurtle, 50, 220, 0)
+drawFiveCircles(petalTurtle, 25, 220, 0)
+
 
 centerTurtle = turtle.Turtle()
 centerTurtle.speed(0)
@@ -25,161 +45,30 @@ stampTurtle.speed(0)
 stampTurtle.shape("turtle")
 stampTurtle.hideturtle()
 
-sepalTurtle.up()                    # TODO: Step 2: start here
-sepalTurtle.goto(0, 0)
-sepalTurtle.down()
-for i in range(5):
-    sepalTurtle.begin_fill()
-    sepalTurtle.circle(50)
-    sepalTurtle.end_fill()
-    sepalTurtle.left(72)
 
-petalTurtle.up()
-petalTurtle.goto(0, 0)
-petalTurtle.down()
-for i in range(5):
-    petalTurtle.begin_fill()
-    petalTurtle.circle(25)
-    petalTurtle.end_fill()
-    petalTurtle.left(72)
+def drawFiveCircles(turt,r,x,y):
+    turt.up()
+    turt.goto(x, y)
+    turt.down()
+    turt.begin_fill()
+    turt.circle(r)
+    turt.end_fill()
+drawFiveCircles(centerTurtle, 15, 0, -15)
+drawFiveCircles(centerTurtle, 15, 0, 205)
+drawFiveCircles(centerTurtle, 15, 220, -15)
+drawFiveCircles(centerTurtle, 15, -220, -15)
+drawFiveCircles(centerTurtle, 15, 0, -235)
+def drawstamp(turt,x,y):
+    turt.up()
+    turt.goto(x,y)
+    turt.down()
+    turt.stamp()
 
+drawstamp(stampTurtle,-2, 0)
+drawstamp(stampTurtle,-2, 220)
+drawstamp(stampTurtle,218, 0)
+drawstamp(stampTurtle,-2, -220)
+drawstamp(stampTurtle,-222, 0)
 
-centerTurtle.up()
-centerTurtle.goto(0, -15)
-centerTurtle.down()
-centerTurtle.begin_fill()
-centerTurtle.circle(15)
-centerTurtle.end_fill()
-
-stampTurtle.up()
-stampTurtle.goto(-2,0)
-stampTurtle.down()
-stampTurtle.stamp()
-
-sepalTurtle.up()
-sepalTurtle.goto(0, 220)
-sepalTurtle.down()
-for i in range(5):
-    sepalTurtle.begin_fill()
-    sepalTurtle.circle(50)
-    sepalTurtle.end_fill()
-    sepalTurtle.left(72)
-
-petalTurtle.up()
-petalTurtle.goto(0, 220)
-petalTurtle.down()
-for i in range(5):
-    petalTurtle.begin_fill()
-    petalTurtle.circle(25)
-    petalTurtle.end_fill()
-    petalTurtle.left(72)
-
-centerTurtle.up()
-centerTurtle.goto(0, 205)
-centerTurtle.down()
-centerTurtle.begin_fill()
-centerTurtle.circle(15)
-centerTurtle.end_fill()
-
-stampTurtle.up()
-stampTurtle.goto(-2,220)
-stampTurtle.down()
-stampTurtle.stamp()
-
-sepalTurtle.up()
-sepalTurtle.goto(220, 0)
-sepalTurtle.down()
-for i in range(5):
-    sepalTurtle.begin_fill()
-    sepalTurtle.circle(50)
-    sepalTurtle.end_fill()
-    sepalTurtle.left(72)
-
-
-petalTurtle.up()
-petalTurtle.goto(220, 0)
-petalTurtle.down()
-for i in range(5):
-    petalTurtle.begin_fill()
-    petalTurtle.circle(25)
-    petalTurtle.end_fill()
-    petalTurtle.left(72)
-
-
-centerTurtle.up()
-centerTurtle.goto(220, -15)
-centerTurtle.down()
-centerTurtle.begin_fill()
-centerTurtle.circle(15)
-centerTurtle.end_fill()
-
-stampTurtle.up()
-stampTurtle.goto(218,0)
-stampTurtle.down()
-stampTurtle.stamp()
-
-sepalTurtle.up()
-sepalTurtle.goto(0, -220)
-sepalTurtle.down()
-for i in range(5):
-    sepalTurtle.begin_fill()
-    sepalTurtle.circle(50)
-    sepalTurtle.end_fill()
-    sepalTurtle.left(72)
-
-
-petalTurtle.up()
-petalTurtle.goto(0, -220)
-petalTurtle.down()
-for i in range(5):
-    petalTurtle.begin_fill()
-    petalTurtle.circle(25)
-    petalTurtle.end_fill()
-    petalTurtle.left(72)
-
-
-centerTurtle.up()
-centerTurtle.goto(0, -235)
-centerTurtle.down()
-centerTurtle.begin_fill()
-centerTurtle.circle(15)
-centerTurtle.end_fill()
-
-stampTurtle.up()
-stampTurtle.goto(-2,-220)
-stampTurtle.down()
-stampTurtle.stamp()
-
-sepalTurtle.up()
-sepalTurtle.goto(-220, 0)
-sepalTurtle.down()
-for i in range(5):
-    sepalTurtle.begin_fill()
-    sepalTurtle.circle(50)
-    sepalTurtle.end_fill()
-    sepalTurtle.left(72)
-
-
-petalTurtle.up()
-petalTurtle.goto(-220, 0)
-petalTurtle.down()
-for i in range(5):
-    petalTurtle.begin_fill()
-    petalTurtle.circle(25)
-    petalTurtle.end_fill()
-    petalTurtle.left(72)
-
-
-centerTurtle.up()
-centerTurtle.goto(-220, -15)
-centerTurtle.down()
-centerTurtle.begin_fill()
-centerTurtle.circle(15)
-centerTurtle.end_fill()
-
-stampTurtle.up()
-stampTurtle.goto(-222,0)
-stampTurtle.down()
-stampTurtle.stamp()
 
 win.exitonclick()
