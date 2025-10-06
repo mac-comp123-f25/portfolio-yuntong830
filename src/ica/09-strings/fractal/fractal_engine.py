@@ -7,7 +7,7 @@ Draw fractal
 import turtle
 
 
-def draw_fractal(tur: turtle, l_system: str, angle: float, step_size: float):
+def draw_fractal(tur: turtle.Turtle, l_system: str, angle: float, step_size: float):
     """
     Using the passed turtle, draw the l-system with the angle and step_size
     """
