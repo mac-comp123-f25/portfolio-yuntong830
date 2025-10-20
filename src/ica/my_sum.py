@@ -1,7 +1,8 @@
 def sum3(values):
     assert type(values) in [list, tuple]
     assert len(values) >= 3
-    assert all(type(values[i]) in [int, float] for i in range(3))
+    for i in range(3):
+        assert type(values[i]) in [int, float]
     total=values[0] + values[1] + values[2]
     return total
 
