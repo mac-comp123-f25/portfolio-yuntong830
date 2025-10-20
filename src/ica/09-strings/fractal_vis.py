@@ -62,13 +62,10 @@ if __name__ == '__main__':
     tur.goto(-300, -200)
     tur.down()
 
-    # draw_koch_curve(tur, 4, 60, 5)
-    #draw_quadratic_koch_curve(tur, 4, 90, 5)
-    # draw_hilbert_curve(tur, 4, 90, 5)
-    # draw_quadratic_koch_islad(tur, 3, 90, 5)
-    draw_dragon_curve(tur, 3, 90, 5)
-    # draw_combination_of_lacks_and_islands_curve(tur, 2, 90, 5)
 
+    #draw_quadratic_koch_curve(tur, 4, 90, 5)
+    draw_dragon_curve(tur, 3, 90, 5)
+  
     tur.up()
     tur.forward(50)
     tur.color('red')
