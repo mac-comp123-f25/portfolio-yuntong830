@@ -65,7 +65,7 @@ if __name__ == '__main__':
 
     #draw_quadratic_koch_curve(tur, 4, 90, 5)
     draw_dragon_curve(tur, 3, 90, 5)
-  
+
     tur.up()
     tur.forward(50)
     tur.color('red')
