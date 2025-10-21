@@ -5,7 +5,15 @@ Implementation of the Aristid Lindenmayer-system (L-systems)
 """
 
 
-def apply_l_system(axiom: str, rules: dict, n: int):
+def apply_l_system(system):
+    assert type(system) is dict
+    assert len(system)== 3
+    assert all(key in system for key in['axiom','rules','n']),\
+        "Dictionary must have keys: 'axiom', 'rules', and 'n'."
+    axiom = system['axiom']
+    rules = system['rules']
+    n = system['n']
+
     assert type(axiom) is str
     assert type(rules) is dict
     assert type(n) is int
@@ -26,15 +34,12 @@ def apply_rules(s: str, rules: dict):
         rule_found = False
         for key in rules:
             if len(key) != 1:
-                print("{} -> {} not supported, LHS is not of length "
-                      "1".format(key, rules[key]))
+                print("{} -> {} not supported, LHS is not of length 1".format(key, rules[key]))
                 assert False
             if key == c:
                 new_str += rules[key]
                 rule_found = True
                 break
-
-        # no rule
         if not rule_found:
             new_str += c
 
@@ -42,8 +47,11 @@ def apply_rules(s: str, rules: dict):
 
 
 if __name__ == "__main__":
-    axiom = 'A'
-    rules = {('A', 'B'), ('B', 'AB')}
+    hilbert_curve = {
+        'axiom': 'F+F+F+F',
+        'rules': {'F': 'F+F-F-FF+F+F-F'},
+        'n': 2
+    }
 
-    for i in range(10):
-        print(apply_l_system(axiom, rules, i))
+    print("Generated L-system string:")
+    print(apply_l_system(hilbert_curve))
