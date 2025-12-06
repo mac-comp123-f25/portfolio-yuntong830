@@ -5,6 +5,7 @@ class Employee:
         self.gender = gender
         self.will_comment = will_comment
         self.comments_received = 0
+
     def __str__(self):
         return (self.gender
                 + ": "
