@@ -1,16 +1,21 @@
-def every_other(input_list):
-    return input_list[::2]
+from src.ica.helpers.imageTools import *
+from src.ica.helpers.dummyWindow import *
 
-def sum_positive(input_list):
-    total = 0
-    for num in input_list:
-        if num > 0:
-            total += num
-    return total
-x = ["a", "b", "c", "d"]
-y = [1, 2, 3, 4]
+def main():
+    pic = Picture("../SampleImages/mightyMidway.jpg")
+    width = pic.getWidth()
+    height = pic.getHeight()
+    print("Number of pixels:", width * height)
+    copy_pic = pic.copy()
+    red = (255, 0, 0)
+    copy_pic.setColor(0, 0, red)
+    copy_pic.setColor(width - 1, 0, red)
+    copy_pic.setColor(0, height - 1, red)
+    copy_pic.setColor(width - 1, height - 1, red)
+    copy_pic.save("mightyMidway-redCorners.jpg")
+    copy_pic.explore()
 
-print(every_other(x))
-print(sum_positive(y))
+    keep_windows_open()
 
-
+if __name__ == "__main__":
+    main()
